@@ -1,6 +1,8 @@
 // import React from 'react';
-import React, { useState } from 'react';
-import { render } from 'react-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from "./Login"
+import Feed from "./Feed.js"
 
 
 // const App = (props) => {
@@ -8,20 +10,20 @@ import { render } from 'react-dom';
 // };
 
 
-function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
+function App() {
 
-  return (
+  return (  
     <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route path="/feed" component={Feed} />
+      </Switch>
+      </Router>
     </div>
   );
 }
 
 
 
-export default Example;
+export default App;

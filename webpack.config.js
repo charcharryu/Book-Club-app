@@ -30,6 +30,9 @@ module.exports = {
   devServer: {
     // host: 'localhost',
     // contentBase: path.join(__dirname, '/'),
+    proxy: {
+      '/feed': 'http://localhost:3000',
+    },
     publicPath: '/build',
     compress: true,
     port: 8080,

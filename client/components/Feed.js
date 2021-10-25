@@ -11,7 +11,7 @@ function Feed () {
   });
   return (
     <div>
-      this is Feed.
+      this is Feed. this is not not Feed.
     </div>
   )
 }
